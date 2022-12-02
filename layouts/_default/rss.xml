@@ -6,7 +6,7 @@
 {{- else -}}
 {{- $pages = $pctx.Pages -}}
 {{- end -}}
-{{- $limit := site.Config.Services.RSS.Limit -}}
+{{- $limit := site.Params.rssLimit -}}
 {{- if ge $limit 1 -}}
 {{- $pages = $pages | first $limit -}}
 {{- end -}}
